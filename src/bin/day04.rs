@@ -1,16 +1,16 @@
 use std::collections::HashMap;
 fn main() {
-    //let input = include_str!("../input/day04.txt");
-     let input = "..@@.@@@@.
- @@@.@.@.@@
- @@@@@.@.@@
- @.@@@@..@.
- @@.@@@@.@@
- .@@@@@@@.@
- .@.@.@.@@@
- @.@@@.@@@@
- .@@@@@@@@.
- @.@.@@@.@.";
+    let input = include_str!("../input/day04.txt");
+//     let input = "..@@.@@@@.
+// @@@.@.@.@@
+// @@@@@.@.@@
+// @.@@@@..@.
+// @@.@@@@.@@
+// .@@@@@@@.@
+// .@.@.@.@@@
+// @.@@@.@@@@
+// .@@@@@@@@.
+// @.@.@@@.@.";
     let mut map: HashMap<(i32, i32), char> = HashMap::new();
     for (row_index, line) in input.lines().enumerate() {
         for (column_index, char) in line.chars().enumerate() {
@@ -19,16 +19,16 @@ fn main() {
     }
     //the map is now initialized so that we're basically working exclusively in quadrant IV
     //we're doing <x,y> stuff here exclusvie
-    println!("len is: {}", get_removable(&map).len());
-    println!("Says we can remove: {:?}", get_removable(&map))
-//    let mut counter = 0;
-//    let mut removable_targets =get_removable(&map);
-//    while !removable_targets.is_empty() {
-//        counter+=removable_targets.len();
-//        remove(&mut map,removable_targets);
-//        removable_targets = get_removable(&map);
-//    }
-//    println!("Counter says: {counter}");
+    //println!("len is: {}", get_removable(&map).len());
+    //println!("Says we can remove: {:?}", get_removable(&map))
+    let mut counter = 0;
+    let mut removable_targets =get_removable(&map);
+    while !removable_targets.is_empty() {
+        counter+=removable_targets.len();
+        remove(&mut map,removable_targets);
+        removable_targets = get_removable(&map);
+    }
+    println!("Counter says: {counter}");
 
 
 }
@@ -65,7 +65,7 @@ fn get_removable(map: &HashMap<(i32, i32), char>) -> Vec<(i32,i32)> {
     ];
     
     map.iter()
-        .filter(|(_, char)| **char!='@')
+        .filter(|(_, char)| **char=='@')
         .filter(|((x,y), _)|{
             let roll_count = DELTAS.iter()
                 .filter(|(dx, dy)| map.get(&(x+dx, y+dy)) == Some(&'@'))
