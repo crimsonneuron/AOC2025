@@ -18,7 +18,7 @@ impl Range {
     }
 
     fn overlaps(&self, another: &Self) -> bool{
-        another.is_in(self.from) || another.is_in(self.to) 
+        another.is_in(self.from) || another.is_in(self.to) || self.is_in(another.to) || self.is_in(another.from)
     }
 
     fn pairwise_merge(one: &Self, another: &Self) -> Option<Range>{
@@ -48,7 +48,7 @@ impl PartialOrd for Range {
     }
 }
 fn main() {
-    println!("Can it be merged? {}", !Range::pairwise_merge(&Range::new(1,3), &Range::new(2,4)).is_none());
+    println!("Can it be merged? {:?}", Range::pairwise_merge(&Range::new(2,5), &Range::new(3,4)));
     part_two()
 }
 
@@ -65,7 +65,7 @@ fn part_two() {
 
     range.sort();
 
-    for i in &range[0..10] {
+    for i in &range[0..20] {
         println!("Before editing:{:?}", i)
     }
     iterative_merge(&mut range);
