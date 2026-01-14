@@ -1,0 +1,779 @@
+x is 7
+x is 11
+x is 11
+x is 9
+x is 9
+x is 2
+x is 2
+x is 7
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 8, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 8, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 9, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 9, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 10, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 10, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XPos
+Rel coord is 7
+Rel coord is 8
+Rel coord is 9
+Rel coord is 10
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XNeg
+Rel coord is 7
+Rel coord is 6
+Rel coord is 5
+Rel coord is 4
+Rel coord is 3
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+The line Line { start_point: Coord { x: 7, y: 1 }, end_point: Coord { x: 7, y: 7 } } failed the off axis check
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XPos
+Rel coord is 7
+Rel coord is 8
+Rel coord is 9
+Rel coord is 10
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XNeg
+Rel coord is 7
+Rel coord is 6
+Rel coord is 5
+Rel coord is 4
+Rel coord is 3
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+The line Line { start_point: Coord { x: 7, y: 1 }, end_point: Coord { x: 7, y: 7 } } failed the off axis check
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XPos
+Rel coord is 7
+Rel coord is 8
+Rel coord is 9
+Rel coord is 10
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XNeg
+Rel coord is 7
+Rel coord is 6
+Rel coord is 5
+Rel coord is 4
+Rel coord is 3
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+The line Line { start_point: Coord { x: 7, y: 1 }, end_point: Coord { x: 7, y: 5 } } failed the off axis check
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XPos
+Rel coord is 7
+Rel coord is 8
+Rel coord is 9
+Rel coord is 10
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XNeg
+Rel coord is 7
+Rel coord is 6
+Rel coord is 5
+Rel coord is 4
+Rel coord is 3
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+The line Line { start_point: Coord { x: 7, y: 1 }, end_point: Coord { x: 7, y: 5 } } failed the off axis check
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 1 }, direction XPos
+Rel coord is 2
+Rel coord is 3
+Rel coord is 4
+Rel coord is 5
+Rel coord is 6
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 1 }, direction XNeg
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 6 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 6 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 6 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 6 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 9, y: 7 }, direction YPos
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 9, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 4 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 1 }, direction XPos
+Rel coord is 2
+Rel coord is 3
+Rel coord is 4
+Rel coord is 5
+Rel coord is 6
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 1 }, direction XNeg
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 2 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 1 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 8, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 8, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 9, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 9, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 10, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 10, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 1 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 9, y: 7 }, direction YPos
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 9, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 5 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 5 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 4 }, direction XPos
+Rel coord is 2
+Rel coord is 3
+Rel coord is 4
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+Rel coord is 9
+Rel coord is 10
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 4 }, direction XNeg
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+The line Line { start_point: Coord { x: 2, y: 3 }, end_point: Coord { x: 2, y: 7 } } failed the off axis check
+Checking a line
+Checking this coord Coord { x: 11, y: 7 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 7 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 11, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 11, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XPos
+Rel coord is 7
+Rel coord is 8
+Rel coord is 9
+Rel coord is 10
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 4 }, direction XNeg
+Rel coord is 7
+Rel coord is 6
+Rel coord is 5
+Rel coord is 4
+Rel coord is 3
+Rel coord is 2
+Rel coord is 1
+This check is returning false
+The line Line { start_point: Coord { x: 7, y: 3 }, end_point: Coord { x: 7, y: 7 } } failed the off axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 7 }, direction YPos
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 7 }, direction YPos
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 7 }, direction YPos
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 7 }, direction YPos
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 9, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 2, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 2, y: 5 }, direction YPos
+Rel coord is 5
+Rel coord is 6
+Rel coord is 7
+Rel coord is 8
+This check is returning false
+This line failed on the on-axis check
+Checking a line
+Checking this coord Coord { x: 2, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 2, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 2, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 3, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 3, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 4, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 4, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 5, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 5, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 6, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 6, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction YPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction YNeg
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+Checking a line
+Checking this coord Coord { x: 7, y: 3 }, direction XPos
+This ray check is returning true!
+Checking this coord Coord { x: 7, y: 3 }, direction XNeg
+This ray check is returning true!
+The largest rectangle's size is 5

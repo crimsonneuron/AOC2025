@@ -1,5 +1,5 @@
 use std::collections::HashSet;
-
+#[derive(Debug)]
 struct Boundaries {
     max_x: i32,
     max_y: i32,
@@ -34,27 +34,43 @@ impl Coord {
         self.y+=other.y;
     }
     fn ray_intersects (&self, edges: &HashSet<Coord>, direction: Direction, bounds: &Boundaries) -> bool {
-        let (delta, relevant_coord)  = match direction {
-            Direction::XPos => (Coord {x:1, y:0}, self.x),
-            Direction::XNeg => (Coord {x:-1, y:0}, self.x),
-            Direction::YPos => (Coord {x: 0,y: 1}, self.y),
-            Direction::YNeg => (Coord {x: 0,y: -1}, self.y),
-        };
+        println!("Checking this coord {:?}, direction {:?}", self, direction);
+
         let mut ray_coord = self.clone();
+        let delta  = match direction {
+            Direction::XPos => Coord {x:1, y:0},
+            Direction::XNeg => Coord {x:-1, y:0},
+            Direction::YPos => Coord {x: 0,y: 1},
+            Direction::YNeg => Coord {x: 0,y: -1},
+        };
         let outside_bound = bounds.index(direction);
+        let mut relevant_coord = ray_coord.get_relevant_coord(direction);
         while relevant_coord!= outside_bound {
-            ray_coord.add(delta);
             if edges.contains(&ray_coord) {
+                println!("This ray check is returning true!");
                 return true
             }
+            relevant_coord = ray_coord.get_relevant_coord(direction);
+            println!("Rel coord is {}", relevant_coord);
+            ray_coord.add(delta);
         }
+        println!("This check is returning false");
         false
     
+    }
+    fn get_relevant_coord(&self, dir: Direction) -> i32 {
+        match dir {
+            Direction::XPos =>  self.x,
+            Direction::XNeg =>  self.x,
+            Direction::YPos =>  self.y,
+            Direction::YNeg =>  self.y,
+        }
+        
     }
 }
 
 
-#[derive(Eq, PartialEq,Clone,Copy)]
+#[derive(Debug,Eq, PartialEq,Clone,Copy)]
 enum Direction {
     XPos,
     YPos,
@@ -85,7 +101,7 @@ impl Axis {
 }
 
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Debug)]
 struct Line {
     start_point: Coord,
     end_point: Coord 
@@ -100,6 +116,7 @@ impl Line {
         }
     }
     fn ray_check_legality(&self, edges: &HashSet<Coord>, bounds: &Boundaries) -> bool {
+        println!("Checking a line");
         let axis = self.get_axis();
         let axis_directions = axis.expand_into_dirs();
         let off_axis_directions = axis.not().expand_into_dirs();
@@ -107,14 +124,19 @@ impl Line {
         //checking the axis that the line is parallel with
         //only need to check once, since this'll hold for every coord on the axis
         if !self.start_point.ray_intersects(&edges, axis_directions[0], &bounds) || !self.start_point.ray_intersects(&edges, axis_directions[1], &bounds) {
+            println!("This line failed on the on-axis check");
             return false;
         }
         
         //for each coords
         //if any coord, on either direction, returns false, return false
-        self.into_iter().all(|coord| {
-            coord.ray_intersects(&edges, off_axis_directions[1], &bounds) && coord.ray_intersects(&edges, off_axis_directions[1], &bounds)
-        })
+        let true_false = self.into_iter().all(|coord| {
+            coord.ray_intersects(&edges, off_axis_directions[0], &bounds) && coord.ray_intersects(&edges, off_axis_directions[1], &bounds)
+        });
+        if !true_false {
+            println!("The line {:?} failed the off axis check", self)
+        }
+        true_false
     }
 }
 impl IntoIterator for Line {
@@ -159,21 +181,22 @@ impl Rectangle {
         let lines = self.to_lines();
         lines.into_iter().all(|line| line.ray_check_legality(edges, bounds))
     }
+
 }
 fn rectangle_size(one_corner: Coord, another_corner: Coord) -> i64 {
     ((one_corner.x-another_corner.x+1) as i64)*((one_corner.y-another_corner.y+1) as i64).abs()
 }
 fn main() {
-//   let input = "7,1
-//11,1
-//11,7
-//9,7
-//9,5
-//2,5
-//2,3
-//7,3";
-    let input = include_str!("../input/day09.txt");
-    part_one(input)
+   let input = "7,1
+11,1
+11,7
+9,7
+9,5
+2,5
+2,3
+7,3";
+    //let input = include_str!("../input/day09.txt");
+    part_two(input)
 }
 
 fn part_one(input: &str) {
@@ -224,29 +247,36 @@ fn part_one(input: &str) {
 fn part_two(input: &str) {
     //get the vec of points
     //
-    let coord_list: Vec<Coord> = Vec::new();
-    let mut max_x =0;
-    let mut max_y =0;
-
+    let mut coord_list: Vec<Coord> = Vec::new();
+    let mut max_x =i32::MIN;
+    let mut max_y =i32::MIN;
+    let mut min_x =i32::MAX;
+    let mut min_y =i32::MAX;
+    
     for line in input.lines().filter(|line| !line.trim().is_empty()) {
-
+        let (a, b) = line.split_once(',').unwrap();
+        let arr = [a.trim().parse::<i32>().unwrap(), b.trim().parse::<i32>().unwrap()];
+        println!("x is {}", arr[0]);
+        if arr[0] > max_x {
+            max_x = arr[0];
+        }
+        if arr[0]<min_x {
+            min_x = arr[0];
+        }
+        if arr[1] > max_y {
+            max_y = arr[1];
+        }
+        if arr[1] < min_y {
+            min_y = arr[1];
+        }
+        coord_list.push(Coord {x: arr[0], y: arr[1]});
     }
 
-    let coord_list: Vec<Coord> = input.lines()
-        .filter(|line| !line.trim().is_empty())
-        .map(|line| 
-            line.split(',')
-        ).map(|mut str_array|
-            Coord {
-                x: str_array.next().unwrap().parse().unwrap(),
-                y: str_array.next().unwrap().parse().unwrap(),
-            } 
-        )
-        .collect();
- 
+    let bounds = Boundaries {max_x: max_x+1, max_y: max_y+1, min_y: min_y-1, min_x: min_x-1};
+
     let mut edges: HashSet<Coord> = HashSet::new();
-    for window in coord_list.iter().windows(2) {
-        let line = Line {start_point: &window[0], end_point: &window[1]};
+    for window in coord_list.windows(2) {
+        let line = Line {start_point: window[0], end_point: window[1]};
         for coord in line.into_iter() {
             edges.insert(coord);
         }
@@ -257,10 +287,19 @@ fn part_two(input: &str) {
        edges.insert(coord);
     }
 
+   //Testing ---------------
+   
+    let mut best: i64 = 0;
     
-    
+    for i in 0..coord_list.len() {
+        for j in i+1..coord_list.len() {
+            let this_rect = Rectangle {one_corner: coord_list[i], another_corner: coord_list[j]};
+            if this_rect.is_valid(&edges, &bounds) && this_rect.rectangle_size() > best {
+                best = this_rect.rectangle_size();
+            }
+        }
+    }
 
-
-
+    println!("The largest rectangle's size is {best}");
 
 }

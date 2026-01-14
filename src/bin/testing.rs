@@ -1,7 +1,8 @@
 fn main() {
-    let string = "Hello world";
-    for char in string.chars() {
-        println!("{char}");
+    let string = "1,2
+3,4";
+    for line in string.split('n') {
+        println!("{line}");
     }
 }
 
