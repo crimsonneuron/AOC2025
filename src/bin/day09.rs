@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use std::collections::{HashSet, HashMap};
 #[derive(Debug)]
 struct Boundaries {
     max_x: i32,
@@ -67,6 +67,10 @@ impl Coord {
         }
         
     }
+    fn is_coord_valid(&self, edges: &HashSet<Coord>, bounds: &Boundaries) -> bool{
+        [Direction::XPos, Direction::YPos, Direction::XNeg, Direction::YNeg].iter().all(|&dir| self.ray_intersects(edges, dir, bounds))
+    }
+
 }
 
 
@@ -115,29 +119,29 @@ impl Line {
             return Axis::X
         }
     }
-    fn ray_check_legality(&self, edges: &HashSet<Coord>, bounds: &Boundaries) -> bool {
-        println!("Checking a line");
-        let axis = self.get_axis();
-        let axis_directions = axis.expand_into_dirs();
-        let off_axis_directions = axis.not().expand_into_dirs();
-        
-        //checking the axis that the line is parallel with
-        //only need to check once, since this'll hold for every coord on the axis
-        if !self.start_point.ray_intersects(&edges, axis_directions[0], &bounds) || !self.start_point.ray_intersects(&edges, axis_directions[1], &bounds) {
-            println!("This line failed on the on-axis check");
-            return false;
-        }
-        
-        //for each coords
-        //if any coord, on either direction, returns false, return false
-        let true_false = self.into_iter().all(|coord| {
-            coord.ray_intersects(&edges, off_axis_directions[0], &bounds) && coord.ray_intersects(&edges, off_axis_directions[1], &bounds)
-        });
-        if !true_false {
-            println!("The line {:?} failed the off axis check", self)
-        }
-        true_false
-    }
+  //  fn ray_check_legality(&self, edges: &HashSet<Coord>, bounds: &Boundaries) -> bool {
+  //      println!("Checking a line");
+  //      let axis = self.get_axis();
+  //      let axis_directions = axis.expand_into_dirs();
+  //      let off_axis_directions = axis.not().expand_into_dirs();
+  //      
+  //      //checking the axis that the line is parallel with
+  //      //only need to check once, since this'll hold for every coord on the axis
+  //      if !self.start_point.ray_intersects(&edges, axis_directions[0], &bounds) || !self.start_point.ray_intersects(&edges, axis_directions[1], &bounds) {
+  //          println!("This line failed on the on-axis check");
+  //          return false;
+  //      }
+  //      
+  //      //for each coords
+  //      //if any coord, on either direction, returns false, return false
+  //      let true_false = self.into_iter().all(|coord| {
+  //          coord.ray_intersects(&edges, off_axis_directions[0], &bounds) && coord.ray_intersects(&edges, off_axis_directions[1], &bounds)
+  //      });
+  //      if !true_false {
+  //          println!("The line {:?} failed the off axis check", self)
+  //      }
+  //      true_false
+  //  }
 }
 impl IntoIterator for Line {
     type Item =Coord;
@@ -153,6 +157,7 @@ impl IntoIterator for Line {
     }
 }
 
+
 struct Rectangle {
     one_corner: Coord,
     another_corner: Coord
@@ -161,26 +166,26 @@ impl Rectangle {
     fn rectangle_size(&self) -> i64 {
         ((self.one_corner.x-self.another_corner.x+1) as i64)*((self.one_corner.y-self.another_corner.y+1) as i64).abs()
     }
-    fn to_lines(&self) -> [Line;4] {
-        [
-            Line {
-                start_point: self.one_corner, end_point: Coord {x:self.one_corner.x, y:self.another_corner.y}
-            },
-            Line {
-                start_point: Coord {x:self.one_corner.x, y:self.another_corner.y}, end_point: self.another_corner
-            },
-            Line {
-                start_point: self.another_corner, end_point: Coord {x: self.another_corner.x, y: self.one_corner.y}
-            },
-            Line {
-                start_point: Coord {x: self.another_corner.x, y: self.one_corner.y}, end_point: self.one_corner
-            }
-        ]
-    }
-    fn is_valid(&self, edges: &HashSet<Coord>, bounds: &Boundaries) -> bool {
-        let lines = self.to_lines();
-        lines.into_iter().all(|line| line.ray_check_legality(edges, bounds))
-    }
+   // fn to_lines(&self) -> [Line;4] {
+   //     [
+   //         Line {
+   //             start_point: self.one_corner, end_point: Coord {x:self.one_corner.x, y:self.another_corner.y}
+   //         },
+   //         Line {
+   //             start_point: Coord {x:self.one_corner.x, y:self.another_corner.y}, end_point: self.another_corner
+   //         },
+   //         Line {
+   //             start_point: self.another_corner, end_point: Coord {x: self.another_corner.x, y: self.one_corner.y}
+   //         },
+   //         Line {
+   //             start_point: Coord {x: self.another_corner.x, y: self.one_corner.y}, end_point: self.one_corner
+   //         }
+   //     ]
+   // }
+   // fn is_valid(&self, edges: &HashSet<Coord>, bounds: &Boundaries) -> bool {
+   //     let lines = self.to_lines();
+   //     lines.into_iter().all(|line| line.ray_check_legality(edges, bounds))
+   // }
 
 }
 fn rectangle_size(one_corner: Coord, another_corner: Coord) -> i64 {
@@ -244,35 +249,32 @@ fn part_one(input: &str) {
 //and then just have the func that takes a line do the one x/y cast (just like the extreme value
 //for ease )
 //
+//Ok that turns out to be an O(n^3) and it never returns. New plan: Cells and prefix sums
+//For each unique x and each unique y, build the Cells
+//in particular, we're going to do that (since the vecs will be in desc order), each cell gets the
+//current value, then the next value+1.
+//
+//
+//For the new coords, we'll need to come up with something. I guess that at each 
+//Then, we'll need to keep around the coord checks just to check whether each cell is good
+//
+//Then we'll do a prefix sum 
 fn part_two(input: &str) {
     //get the vec of points
     //
     let mut coord_list: Vec<Coord> = Vec::new();
-    let mut max_x =i32::MIN;
-    let mut max_y =i32::MIN;
-    let mut min_x =i32::MAX;
-    let mut min_y =i32::MAX;
+    let mut x_list: Vec<i32> = Vec::new();
+    let mut y_list: Vec<i32> = Vec::new();
     
     for line in input.lines().filter(|line| !line.trim().is_empty()) {
-        let (a, b) = line.split_once(',').unwrap();
-        let arr = [a.trim().parse::<i32>().unwrap(), b.trim().parse::<i32>().unwrap()];
-        println!("x is {}", arr[0]);
-        if arr[0] > max_x {
-            max_x = arr[0];
-        }
-        if arr[0]<min_x {
-            min_x = arr[0];
-        }
-        if arr[1] > max_y {
-            max_y = arr[1];
-        }
-        if arr[1] < min_y {
-            min_y = arr[1];
-        }
-        coord_list.push(Coord {x: arr[0], y: arr[1]});
+        let (x, y) = line.split_once(',').unwrap();
+        let (x,y) = (x.trim().parse::<i32>().unwrap(), y.trim().parse::<i32>().unwrap());
+        x_list.push(x);
+        y_list.push(y);
+        coord_list.push(Coord {x: x, y: y});
     }
 
-    let bounds = Boundaries {max_x: max_x+1, max_y: max_y+1, min_y: min_y-1, min_x: min_x-1};
+
 
     let mut edges: HashSet<Coord> = HashSet::new();
     for window in coord_list.windows(2) {
@@ -286,6 +288,56 @@ fn part_two(input: &str) {
     for coord in loop_line {
        edges.insert(coord);
     }
+
+    x_list.sort();
+    x_list.dedup();
+    y_list.sort();
+    y_list.dedup();
+    
+    let mut x_to_grid: HashMap<i32, usize> = x_list.iter().enumerate().map(|(i, &x)| (x,i)).collect();
+    let mut y_to_grid: HashMap<i32, usize> = y_list.iter().enumerate().map(|(i, &y)| (y,i)).collect();
+
+    
+    let bounds = Boundaries {max_x: x_list[x_list.len()-1], max_y: y_list[y_list.len()-1], min_y: y_list[0], min_x: x_list[0]};
+
+    
+    //validity_Grid[y][x];
+    let validity_grid: Vec<Vec<bool>> = y_list.windows(2).map(|[y1,y2]| {
+         x_list.windows(2).map(|[x1,x2]|{
+            Coord {
+                x: (x1+x2)/2,
+                y: (y1+y2)/2
+            }.is_coord_valid(&edges, &bounds)
+        }).collect::<Vec<bool>>()
+    }).collect();
+        
+    let mut prefix_grid: Vec<Vec<i32>>= Vec::new();
+    for y_index in 0..validity_grid.len() {
+        for x_index in 0..validity_grid[0].len() {
+            if y_index ==0 {
+                if x_index == 0{
+                    prefix_grid[0][0] = validity_grid[0][0] as i32;
+                }
+                else {
+                    prefix_grid[y_index][x_index] =prefix_grid[y_index][x_index-1] as i32;
+                }
+            }
+            else {
+                if x_index==0 {
+                    prefix_grid[y_index][x_index] = prefix_grid[y_index-1][x_index] + validity_grid[x_index][y_index] as i32
+                }
+                else {
+                    prefix_grid[y_index][x_index] = prefix_grid[y_index-1][x_index] + prefix_grid[y_index][x_index-1] - prefix_grid[x_index-1][y_index-1] + validity_grid[x_index][y_index] as i32
+                }
+            }
+        }
+
+        fn is_rect_valid(prefix_grid: Vec<Vec<i32>>, rect: Rectangle, x_to_grid: HashMap<i32, usize>, y_to_grid: HashMap<i32, usize>) -> bool {
+        
+            let prefix_sum = prefix_grid[x_cell][y_cell] -
+        }
+    }
+
 
    //Testing ---------------
    
@@ -303,3 +355,19 @@ fn part_two(input: &str) {
     println!("The largest rectangle's size is {best}");
 
 }
+
+fn populate_grid(x_map: &HashMap<i32, usize>,x_list: &Vec<i32>, y_map: &HashMap<i32, usize>, y_list: &Vec<i32>, ) -> HashMap<(usize, usize), bool> {
+    //over all of the i32s in these maps
+    //If the relevant like midpoint is inside of the grid, then we're going to add the usize usize
+    //pair as true 
+    //neat neat neat
+    x_list.windows(2).zip(y_list.windows(2)).map(|([x1, x2], [y1,y2])| {
+        Coord{
+            x: (x1+x2)/2,
+            y: (y1+y2)/2
+        }.is_coord_valid
+    })
+     
+}
+
+
